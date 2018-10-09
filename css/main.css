@@ -9,3 +9,34 @@ html {
   width: 300px;
   background: transparent url("../images/clock-face.svg") no-repeat center center;
 }
+
+.clock-center {
+  left: calc(50% - 14px);
+  bottom: calc(50% - 14px);
+  position: absolute;
+  width: 28px;
+}
+
+.hand {
+  left: calc(50% - 7px);
+  bottom: calc(50% - 8px);
+  position: absolute;
+  width: 14px;
+
+  transform-origin: 50% calc(100% - 8px);
+}
+
+.hand-minute {
+  animation: hand-rotate .5s linear infinite;
+}
+
+.keyframes hand-minute {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
